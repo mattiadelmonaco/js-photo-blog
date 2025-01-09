@@ -44,6 +44,17 @@ header h1 {
     position: relative;
     top: 0;
     left: 0;
+    transition: 0.4s ease-out;
+}
+
+.col:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+    transition: 0.4s ease;
+}
+
+.col:active {
+    background-color: #b5b5b5;
 }
 
 .col--image {
