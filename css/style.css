@@ -5,6 +5,12 @@
     padding: 0;
 }
 
+/* GENERAL */
+
+body {
+    background-image: url(/img/cork.png);
+}
+
 /* HEADER */
 
 header {
@@ -14,8 +20,55 @@ header {
 header h1 {
     font-family: "Edu TAS Beginner", serif;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 90px;
     padding: .625rem;
+}
+
+/* MAIN */
+
+.container {
+    max-width: 75rem;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    gap: 1.5625rem;
+    margin: 3.125rem 0;
+}
+
+.col {
+    background-color: #fff;
+    width: 18.75rem;
+    height: 23.125rem;
+    justify-self: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.col--image {
+    display: flex;
+    justify-content: center;
+}
+
+.col--image__fit {
+    width: 16.5625rem;
+    height: 16.5625rem;
+    object-fit: cover;
+    padding-top: 1.25rem;
+}
+
+.col--image--title {
+    padding-top: .625rem;
+    padding-left: .9375rem;
+    font-family: "Edu TAS Beginner", serif;
+    font-style: italic;
+}
+
+.col--pin {
+    position: absolute;
+    top: -0.5rem;
+    left: calc(50% - 1.125rem);
 }
 
 /* RESPONSIVE - MOBILE FIRST */
@@ -23,17 +76,19 @@ header h1 {
 /* Tablet >= 768px */
 
 @media screen and (min-width: 48rem) {
-    header h1 {
-        font-size: 3.4375rem;
-        padding: .9375rem;
+
+    .container {
+        grid-template-columns: auto auto;
+        justify-self: center;
     }
 }
 
 /* Desktop >= 992px */
 
 @media screen and (min-width: 62rem) {
-    header h1 {
-        font-size: 4.375rem;
-    padding: 1.25rem;
+
+    .container {
+        grid-template-columns: auto auto auto;
+        justify-self: center;
     }
 }
