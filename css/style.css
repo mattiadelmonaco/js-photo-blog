@@ -11,6 +11,10 @@ body {
     background-image: url(/img/cork.png);
 }
 
+.hidden {
+    display: none;
+}
+
 /* HEADER */
 
 header {
