@@ -90,6 +90,10 @@ header h1 {
     left: calc(50% - 1.125rem);
 }
 
+.col:hover .col--pin {
+    display: none;
+}
+
 /* RESPONSIVE - MOBILE FIRST */
 
 /* Tablet >= 768px */
