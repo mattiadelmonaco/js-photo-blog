@@ -34,5 +34,8 @@ const colPhotoElm = document.getElementById("col-photo")
 const containerImageElm = document.getElementById("container-image")
 const titleImageElm = document.getElementById("title-image")
 
+// EVENTS
+
+// On page load
 
 photoCard()
