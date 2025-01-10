@@ -17,7 +17,7 @@ const photoCard = () => {
                 <img class="col--pin" src="img/pin.svg" alt="Photo's pin">
                     <div class="col--image">
                         <img class="loading col--image__fit" src="https://www.icegif.com/wp-content/uploads/2023/07/icegif-1265.gif" alt="loading">
-                        <img class="col--image__fit" src="${imageUrl}" alt="${imageTitle}">
+                        <img class="col--image__fit photo" src="${imageUrl}" alt="${imageTitle}">
                     </div>
                 <p class="col--image--title">${imageTitle}</p>
             </div>
@@ -25,9 +25,14 @@ const photoCard = () => {
             }
 
         const cards = document.querySelectorAll(".col")
+        const overlayImage = overlayElm.querySelector("img")
         
         cards.forEach((card) => {
             card.addEventListener("click", () => {
+        
+                const imgSrc = card.querySelector(".photo")
+                overlayImage.src = imgSrc.src
+
                 overlayElm.classList.remove("hidden")
             })
         })
@@ -35,6 +40,13 @@ const photoCard = () => {
         overlayBtn.addEventListener("click", () => {
             overlayElm.classList.add("hidden")
         })
+
+        
+        // to close overlay also with click on background
+
+        // overlayEmpty.addEventListener("click", () => {
+        //     overlayElm.classList.add("hidden")
+        // })
 
 
         }).finally(() => {
@@ -53,6 +65,7 @@ const containerImageElm = document.querySelectorAll(".col--image")
 const titleImageElm = document.querySelectorAll(".col--image--title")
 const overlayElm = document.getElementById("overlay")
 const overlayBtn = document.getElementById("overlay-btn")
+const overlayEmpty = document.getElementById("overlay-empty")
 
 // EVENTS
 
