@@ -24,6 +24,19 @@ const photoCard = () => {
             `
             }
 
+        const cards = document.querySelectorAll(".col")
+        
+        cards.forEach((card) => {
+            card.addEventListener("click", () => {
+                overlayElm.classList.remove("hidden")
+            })
+        })
+
+        overlayBtn.addEventListener("click", () => {
+            overlayElm.classList.add("hidden")
+        })
+
+
         }).finally(() => {
             const loadingElms = document.querySelectorAll(".loading")
             loadingElms.forEach(loadingElm => loadingElm.classList.add("hidden"))
@@ -31,11 +44,15 @@ const photoCard = () => {
 }
 
 
+
+
 // DOM ELEMENTS 
 
 const colPhotoElm = document.getElementById("col-photo")
 const containerImageElm = document.querySelectorAll(".col--image")
 const titleImageElm = document.querySelectorAll(".col--image--title")
+const overlayElm = document.getElementById("overlay")
+const overlayBtn = document.getElementById("overlay-btn")
 
 // EVENTS
 
